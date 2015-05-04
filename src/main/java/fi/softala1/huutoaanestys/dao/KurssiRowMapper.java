@@ -23,7 +23,7 @@ public class KurssiRowMapper implements RowMapper<Kurssi> {
 		Kurssi k = new KurssiImpl();
 		k.setTunnus(rs.getString("tunnus"));
 		k.setNimi(rs.getString("nimi"));
-		k.setKoulutusohjelma_ID(rs.getInt("koulutusohjelma_ID"));
+		k.setKoulutusohjelma(rs.getString("koulutusohjelma_tunnus"));
 		k.setLaajuus(rs.getInt("laajuus"));
 		k.setAjoitus(rs.getInt("ajoitus"));
 		k.setKuvaus(rs.getString("kuvaus"));

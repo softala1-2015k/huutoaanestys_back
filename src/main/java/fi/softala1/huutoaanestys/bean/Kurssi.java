@@ -6,7 +6,7 @@ public interface Kurssi {
 
 	public abstract String getNimi();
 
-	public abstract int getKoulutusohjelma_ID();
+	public abstract String getKoulutusohjelma();
 
 	public abstract int getLaajuus();
 
@@ -18,7 +18,7 @@ public interface Kurssi {
 
 	public abstract void setNimi(String nimi);
 
-	public abstract void setKoulutusohjelma_ID(int koulutusohjelma_ID);
+	public abstract void setKoulutusohjelma(String koulutusohjelma);
 
 	public abstract void setLaajuus(int laajuus);
 

@@ -6,7 +6,7 @@ package fi.softala1.huutoaanestys.bean;
  * 
  * @param  tunnus              Kurssitunnus (esim. ICT1TN001).
  * @param  nimi                Kurssin nimi (Työasemat ja tietoverkot).
- * @param  koulutusohjelma_ID  Viittaus koulutusohjelmaan, johon kurssi kuuluu.
+ * @param  koulutusohjelma     Viittaus koulutusohjelmaan, johon kurssi kuuluu.
  * @param  laajuus             Opintopistemäärä, jonka kurssista nettoaa.
  * @param  ajoitus             Lukukausi, jona kurssi on suositeltavaa käydä.
  * @param  kuvaus              Kurssikuvaus (olisi suositeltavaa refaktoroida).
@@ -18,16 +18,16 @@ public class KurssiImpl implements Kurssi {
 	
 	private String tunnus;
 	private String nimi;
-	private int koulutusohjelma_ID;
+	private String koulutusohjelma;
 	private int laajuus;
 	private int ajoitus;
 	private String kuvaus;
 	
-	public KurssiImpl(String tunnus, String nimi, int koulutusohjelma_ID,
+	public KurssiImpl(String tunnus, String nimi, String koulutusohjelma,
 			int laajuus, int ajoitus, String kuvaus) {
 		this.tunnus = tunnus;
 		this.nimi = nimi;
-		this.koulutusohjelma_ID = koulutusohjelma_ID;
+		this.koulutusohjelma = koulutusohjelma;
 		this.laajuus = laajuus;
 		this.ajoitus = ajoitus;
 		this.kuvaus = kuvaus;
@@ -36,7 +36,7 @@ public class KurssiImpl implements Kurssi {
 	public KurssiImpl() {
 		this.tunnus = "";
 		this.nimi = "";
-		this.koulutusohjelma_ID = 0;
+		this.koulutusohjelma = "";
 		this.laajuus = 0;
 		this.ajoitus = 0;
 		this.kuvaus = "";
@@ -50,8 +50,8 @@ public class KurssiImpl implements Kurssi {
 		return nimi;
 	}
 
-	public int getKoulutusohjelma_ID() {
-		return koulutusohjelma_ID;
+	public String getKoulutusohjelma() {
+		return koulutusohjelma;
 	}
 
 	public int getLaajuus() {
@@ -75,8 +75,8 @@ public class KurssiImpl implements Kurssi {
 		this.nimi = nimi;
 	}
 
-	public void setKoulutusohjelma_ID(int koulutusohjelma_ID) {
-		this.koulutusohjelma_ID = koulutusohjelma_ID;
+	public void setKoulutusohjelma(String koulutusohjelma) {
+		this.koulutusohjelma = koulutusohjelma;
 	}
 
 	public void setLaajuus(int laajuus) {
