@@ -45,7 +45,7 @@ public class KurssiDAOImpl implements KurssiDAO {
 	public Kurssi etsiKurssi(String tunnus) {
 		String sql = "SELECT tunnus, nimi, koulutusohjelma_tunnus, laajuus, "
 				+ "ajoitus, kuvaus FROM kurssi "
-				+ "JOIN koulutusohjelma ON WHERE tunnus = ?";
+				+ "WHERE tunnus = ?";
 		
 		Object[] parametrit = new Object[] { tunnus };
 		RowMapper<Kurssi> mapper = new KurssiRowMapper();
